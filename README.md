@@ -39,7 +39,7 @@ Currently under development.
    .\venv\Scripts\Activate.ps1
    python -m pip install -r requirements.txt
    alembic upgrade head
-   python -m uvicorn app.main:app --reload
+   python -m uvicorn app.main:app --reload --port 8010
    ```
 
 4. In a second terminal, from the project root:
@@ -50,9 +50,9 @@ Currently under development.
    npm run dev
    ```
 
-The API docs are available at `http://127.0.0.1:8000/docs`; the frontend is at
-`http://localhost:5173`. If port 8000 is already occupied, start the API with
-`--port 8010` and set `VITE_API_URL=http://127.0.0.1:8010` in `frontend/.env.local`.
+The API docs are available at `http://127.0.0.1:8010/docs`; the frontend is at
+`http://localhost:5173`. Set `VITE_API_URL` in `frontend/.env.local` if your API
+uses a different address.
 
 Run backend tests from the project root with
 `backend\venv\Scripts\python.exe -m pytest backend\tests -v`.
